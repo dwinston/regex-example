@@ -1,0 +1,27 @@
+<head>
+  <title>regex-example</title>
+</head>
+
+<body>
+  {{> allItems}}
+</body>
+
+<template name="allItems">
+  <h1>Filter</h1>
+  <form id="#filter">
+    <label for="text">text</label>
+    <input id="text" type="text" value="{{text}}"/>
+    <label for="skip">skip</label>
+    <input id="skip" type="number" value="{{skip}}"/>
+    <label for="limit">limit</label>
+    <input id="limit" type="number" value="{{limit}}"/>
+    <button type="submit">Go</button>
+  </form>
+
+  <h1>Items</h1>
+  <ul>
+  {{#each items}}
+    <li>{{name}}</li>
+  {{/each}}
+  </ul>
+</template>
